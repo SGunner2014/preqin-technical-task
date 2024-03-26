@@ -18,7 +18,7 @@ test.describe("Investors", () => {
   });
 
   test("can navigate from investor list to investor page", async ({ page }) => {
-    page.route("**/api/investors", (route) => {
+    await page.route("**/api/investors", (route) => {
       route.fulfill({
         status: 200,
         body: JSON.stringify(InvestorsFixture),
