@@ -1,0 +1,11 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  linting:
+    uses: ./.github/workflows/linting.yml
+  tests:
+    uses: ./.github/workflows/tests.yml

@@ -30,7 +30,7 @@ export default function Home() {
       <Container>
         <Card>
           <CardHeader>
-            <CardTitle>Investors</CardTitle>
+            <CardTitle id="__investors-title">Investors</CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
@@ -45,9 +45,12 @@ export default function Home() {
               </TableHeader>
               <TableBody>
                 {firms.map((firm) => (
-                  <TableRow key={firm.firm_id}>
+                  <TableRow key={firm.firm_id} id="__investor-row">
                     <TableCell>
-                      <Link href={`/investors/${firm.firm_id}`}>
+                      <Link
+                        href={`/investors/${firm.firm_id}`}
+                        id={`__investor-id-link`}
+                      >
                         <p className="text-blue-500 hover:text-blue-700">
                           {firm.firm_id}
                         </p>

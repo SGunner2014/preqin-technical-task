@@ -26,7 +26,7 @@ export const AssetTable = ({ commitments }: AssetTableProps) => {
       </TableHeader>
       <TableBody>
         {commitments.map((commitment) => (
-          <TableRow key={commitment.id}>
+          <TableRow key={commitment.id} id="__commitment-row">
             <TableCell>{commitment.id}</TableCell>
             <TableCell>
               {commitment.asset_class.toUpperCase()} (

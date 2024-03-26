@@ -59,7 +59,9 @@ const InvestorPage = () => {
           {firm && (
             <Card>
               <CardHeader>
-                <CardTitle>{firm.firm_name}</CardTitle>
+                <CardTitle id={`__investor-${firm.firm_id}-title`}>
+                  {firm.firm_name}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <Table>
