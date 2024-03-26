@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: lts/*
       - run: yarn
+      - run: cp .env.example .env
       - run: yarn build
       - run: npx playwright install --with-deps
       - run: yarn test:e2e
